@@ -23,7 +23,7 @@ Installation
 
 2. Placez le script dans un répertoire de votre choix.
 
-3. Ouvrez un terminal et d ́eplacez-vous dans le répertoire du script.
+3. Ouvrez un terminal et déplacez-vous dans le répertoire du script.
 
 4. Rendez le script exécutable en utilisant la commande chmod +x BUT_3_MiniProjet.sh
 
