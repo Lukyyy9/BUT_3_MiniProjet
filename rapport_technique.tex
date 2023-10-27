@@ -1,0 +1,120 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+\setlist[itemize]{leftmargin=*, labelsep=1em}
+\setlist[enumerate]{leftmargin=*, labelsep=1em}
+
+\definecolor{codebg}{rgb}{0.95,0.95,0.95}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{codebg},
+    basicstyle=\ttfamily,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=4,
+    frame=single
+}
+
+\title{Rapport Technique - Système de Gestion de Favoris pour Répertoires}
+\author{Votre Nom}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Résumé}
+Ce rapport technique décrit un système de gestion de favoris pour répertoires réalisé en utilisant un script Bash. Le système permet aux utilisateurs de sauvegarder, gérer et accéder rapidement à leurs répertoires favoris. Il présente une interface simple et des fonctions essentielles pour simplifier la navigation dans le système de fichiers.
+
+\section{Introduction}
+L'utilisation de répertoires favoris est une pratique courante pour simplifier la navigation dans le système de fichiers. Ce projet vise à créer un outil simple et efficace pour gérer ces favoris en utilisant un script Bash. Le script offre quatre fonctions principales : Sauvegarder, Changer, Supprimer et Lister les favoris.
+
+\section{Corps}
+\subsection{Installation}
+
+Pour utiliser le script de gestion de favoris, suivez les étapes suivantes :
+
+\begin{enumerate}
+    \item Téléchargez le script à l'adresse suivante : 
+    \item Copiez le script dans un fichier texte et enregistrez-le avec l'extension \texttt{.sh}, par exemple \texttt{favorites.sh}.
+
+    \item Rendez le script exécutable en utilisant la commande \texttt{chmod +x favorites.sh}.
+
+    \item Ajoutez le répertoire du script à votre chemin (PATH) en modifiant votre fichier de configuration de shell, par exemple \texttt{~/.bashrc}, en y ajoutant la ligne suivante :
+
+    \begin{verbatim}
+    export PATH="$PATH:/chemin/vers/le/dossier/contenant/le/script"
+    \end{verbatim}
+
+    \item Rechargez votre configuration de shell en exécutant la commande \texttt{source ~/.bashrc}.
+
+    \item Vous pouvez maintenant utiliser les commandes du script pour gérer vos favoris, comme expliqué dans la documentation.
+
+\end{enumerate}
+
+\textbf{Note :} L'ajout du répertoire du script au chemin (PATH) est optionnel, mais il permet d'exécuter le script depuis n'importe quel endroit sans spécifier le chemin complet.
+
+\end{verbatim}
+
+\subsection{Fonctions}
+\subsubsection{Fonction S (Save)}
+La fonction S permet de sauvegarder un nouveau favori en enregistrant le répertoire courant dans la liste des favoris. Elle prend un argument, le nom du favori (une chaîne sans espace), et l'ajoute à la liste.
+
+Exemple d'utilisation :
+\begin{lstlisting}[style=mystyle]
+$ ./favorites.sh S mon_favori
+Favori "mon_favori" sauvegardé.
+\end{lstlisting}
+
+\subsubsection{Fonction C (Change)}
+La fonction C permet de se déplacer dans un répertoire favori. Elle prend en argument le nom du favori et vérifie s'il existe dans la liste. Si le favori existe, la fonction change le répertoire de travail.
+
+Exemple d'utilisation :
+\begin{lstlisting}[style=mystyle]
+$ ./favorites.sh C mon_favori
+Vous êtes maintenant dans le répertoire favori "mon_favori".
+\end{lstlisting}
+
+\subsubsection{Fonction R (Remove)}
+La fonction R permet de supprimer un favori de la liste en fournissant son nom. Si le favori existe, la fonction le supprime de la liste.
+
+Exemple d'utilisation :
+\begin{lstlisting}[style=mystyle]
+$ ./favorites.sh R mon_favori
+Favori "mon_favori" supprimé.
+\end{lstlisting}
+
+\subsubsection{Fonction L (List)}
+La fonction L affiche la liste de tous les favoris enregistrés.
+
+Exemple d'utilisation :
+\begin{lstlisting}[style=mystyle]
+$ ./favorites.sh L
+Liste de favoris :
+1. mon_favori
+2. autre_favori
+\end{lstlisting}
+
+\section{Conclusion}
+Le système de gestion de favoris pour répertoires réalisé en utilisant un script Bash offre une solution simple et pratique pour gérer les répertoires favoris. Il permet aux utilisateurs de sauvegarder, accéder et gérer efficacement leurs favoris, simplifiant ainsi la navigation dans le système de fichiers.
+
+\section{Annexes}
+Le script Bash complet, ainsi que le code source LaTeX de ce rapport, sont disponibles sur GitHub à l'adresse suivante : \url{https://github.com/Lukyyy9/BUT_3_MiniProjet}.
+
+\end{document}
