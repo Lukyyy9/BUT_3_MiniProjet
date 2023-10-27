@@ -1,0 +1,61 @@
+.TH BUT_3_MINIPROJET 1 "Version 1.0"
+.SH NOM
+BUT_3_MiniProjet \- Gestion de Favoris pour Répertoires
+.SH SYNOPSIS
+.BUT_3_MiniProjet.sh [OPTION] [ARGUMENT]
+.SH DESCRIPTION
+.BUT_3_MiniProjet.sh est un script Bash qui permet de gérer des répertoires favoris. Vous pouvez sauvegarder, accéder, supprimer et lister vos favoris.
+.SH OPTIONS
+.IP "\fB\-S\fR, \fB--save\fR NOM_FAVORI"
+Sauvegarde le répertoire courant en tant que favori avec le nom spécifié.
+.IP "\fB\-C\fR, \fB--change\fR NOM_FAVORI"
+Change le répertoire de travail vers le répertoire favori correspondant au nom spécifié.
+.IP "\fB\-R\fR, \fB--remove\fR NOM_FAVORI"
+Supprime le favori correspondant au nom spécifié.
+.IP "\fB\-L\fR, \fB--list\fR"
+Affiche la liste de tous les favoris enregistrés.
+.SH INSTALLATION
+1. Téléchargez le script depuis le référentiel GitHub : [https://github.com/Lukyyy9/BUT_3_MiniProjet](https://github.com/Lukyyy9/BUT_3_MiniProjet)
+2. Placez le script dans un répertoire de votre choix.
+3. Rendez le script exécutable en utilisant la commande :
+   .nf
+   chmod +x BUT_3_MiniProjet.sh
+   .fi
+4. Ajoutez le répertoire du script à votre chemin (PATH) en exécutant les commandes suivantes :
+   .nf
+   mkdir -p ~/bin
+   mv BUT_3_MiniProjet.sh ~/bin/
+   export PATH="$HOME/bin:$PATH"
+   source ~/.bashrc
+   .fi
+.SH EXEMPLES
+.SS Sauvegarder un Favori
+Pour sauvegarder un répertoire courant en tant que favori :
+.nf
+BUT_3_MiniProjet.sh -S nom_du_favori
+.fi
+.SS Accéder à un Favori
+Pour accéder à un répertoire favori :
+.nf
+BUT_3_MiniProjet.sh -C nom_du_favori
+.fi
+.SS Supprimer un Favori
+Pour supprimer un répertoire favori :
+.nf
+BUT_3_MiniProjet.sh -R nom_du_favori
+.fi
+.SS Lister les Favoris
+Pour afficher la liste de tous les répertoires favoris :
+.nf
+BUT_3_MiniProjet.sh -L
+.fi
+.SH AUTEUR
+Ce script a été développé par Lucas 'Lukyyy9' Buonocore.
+.SH RAPPORT DE BUGS
+Pour signaler des bugs, veuillez contacter lucas.buonocore@outlook.fr
+.SH VOIR AUSSI
+La documentation complète est disponible sur [https://github.com/Lukyyy9/BUT_3_MiniProjet](https://github.com/Lukyyy9/BUT_3_MiniProjet).
+.SH LICENCE
+Logiciel open source sans licence.
+.SH REMERCIEMENTS
+Merci Mme Renard pour ce sujet intéressant.
