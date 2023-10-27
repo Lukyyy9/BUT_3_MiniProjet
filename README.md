@@ -33,6 +33,10 @@ Installation
    export PATH ="$HOME/bin:$PATH"
    source ~/.bashrc
 
+6. Pour ajouter MAN dans le système de MAN :
+   sudo mv BUT_3_MiniProjet.1 /usr/share/man/man1/
+   sudo mandb
+
 
 Utilisation
 

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# MANUEL D'UTILISATEUR se trouve dans le fichier BUT_3_MiniProjet.1
+
 FAVORITES_FILE="$HOME/.favorites_bash"
 
 # Initialisation de la liste des favoris

@@ -29,7 +29,7 @@
 }
 
 \title{Rapport Technique - Système de Gestion de Favoris pour Répertoires}
-\author{Votre Nom}
+\author{Lucas 'Lukyyy9' Buonocore}
 \date{\today}
 
 \begin{document}
@@ -58,11 +58,17 @@ Pour utiliser le script de gestion de favoris, suivez les étapes suivantes :
 
     \item Ajoutez le répertoire du script à votre chemin (PATH) en éxécutant les commandes suivantes :
     
-    \begin{lstlisting}[style=mystyle]chmod +x BUT_3_MiniProjet.sh
+    \begin{lstlisting}[style=mystyle]
+    chmod +x BUT_3_MiniProjet.sh
     mkdir -p ~/bin
     mv BUT_3_MiniProjet.sh ~/bin/
     export PATH="$HOME/bin:$PATH"
     source ~/.bashrc}\end{lstlisting}
+
+    \item Pour ajouter MAN dans le système de MAN :
+    \begin{lstlisting}[style=mystyle]
+    sudo mv BUT_3_MiniProjet.1 /usr/share/man/man1/
+    sudo mandb\end{lstlisting}
 
     \item Rechargez votre configuration de shell en exécutant la commande \texttt{source ~/.bashrc}.
 
@@ -115,7 +121,7 @@ Liste de favoris :
 Le système de gestion de favoris pour répertoires réalisé en utilisant un script Bash offre une solution simple et pratique pour gérer les répertoires favoris. Il permet aux utilisateurs de sauvegarder, accéder et gérer efficacement leurs favoris, simplifiant ainsi la navigation dans le système de fichiers.
 
 \section{Annexes}
-Le script Bash complet, le README.md ainsi que le code source LaTeX de ce rapport, sont disponibles sur GitHub à l'adresse suivante : \url{https://github.com/Lukyyy9/BUT_3_MiniProjet}.
-Pour lire le README.md, vous pouvez utiliser, dans le répertoire du fichier, la commande pandoc README.md -s -t man | /usr/bin/man -l -
+Le script Bash complet (BUT_3_MiniProjet.sh), le README (README.md), le fichier MAN (BUT_3_MiniProjet.1) ainsi que le code source LaTeX de ce rapport, sont disponibles sur GitHub à l'adresse suivante : \url{https://github.com/Lukyyy9/BUT_3_MiniProjet}.
+Pour lire le README ou le MAN, vous pouvez utiliser, dans le répertoire du fichier, la commande pandoc <nomDuFichier> -s -t man | /usr/bin/man -l -
 Nécessite l'installation de pandoc : sudo apt-get install pandoc
 \end{document}
