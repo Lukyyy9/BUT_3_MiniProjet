@@ -28,10 +28,10 @@ Installation
 4. Rendez le script exécutable en utilisant la commande chmod +x BUT_3_MiniProjet.sh
 
 5. Ajoutez le répertoire du script à votre chemin (PATH) en éxécutant les commandes suivantes :
-    mkdir -p ~/ bin
-    mv BUT_3_MiniProjet . sh ~/ bin /
-    export PATH =" $HOME / bin : $PATH "
-    source ~/. bashrc
+   mkdir -p ~/bin
+   mv BUT_3_MiniProjet.sh ~/bin/
+   export PATH ="$HOME/bin:$PATH"
+   source ~/.bashrc
 
 
 Utilisation
