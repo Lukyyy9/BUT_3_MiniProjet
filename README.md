@@ -43,34 +43,34 @@ Utilisation
 Voici comment utiliser le système de gestion de favoris pour répertoires :
 
 - Sauvegarder un nouveau favori :
-   BUT_3_MiniProjet.sh S nom_du_favori
+   source BUT_3_MiniProjet.sh S nom_du_favori
 
 - Se déplacer dans un répertoire favori :
-   BUT_3_MiniProjet.sh C nom_du_favori
+   source BUT_3_MiniProjet.sh C nom_du_favori
 
 - Supprimer un favori :
-   BUT_3_MiniProjet.sh R nom_du_favori
+   source BUT_3_MiniProjet.sh R nom_du_favori
 
 - Lister les favoris :
-   BUT_3_MiniProjet.sh L
+   source BUT_3_MiniProjet.sh L
 
 
 Exemples
 
 Sauvegarder un favori :
-$ BUT_3_MiniProjet.sh S mon_favori
+$ source BUT_3_MiniProjet.sh S mon_favori
 Favori "mon_favori" sauvegardé.
 
 Se déplacer dans un répertoire favori :
-$ BUT_3_MiniProjet.sh C mon_favori
+$ source BUT_3_MiniProjet.sh C mon_favori
 Vous êtes maintenant dans le répertoire favori "mon_favori".
 
 Supprimer un favori :
-$ BUT_3_MiniProjet.sh R mon_favori
+$ source BUT_3_MiniProjet.sh R mon_favori
 Favori "mon_favori" supprimé.
 
 Lister les favoris :
-$ BUT_3_MiniProjet.sh L
+$ source BUT_3_MiniProjet.sh L
 Liste de favoris :
 1. mon_favori
 2. autre_favori
