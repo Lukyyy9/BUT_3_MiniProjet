@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FAVORITES_FILE="$HOME/.favorites"
+FAVORITES_FILE="$HOME/.favorites_bash"
 
 # Initialisation de la liste des favoris
 if [ ! -e "$FAVORITES_FILE" ]; then
@@ -12,7 +12,7 @@ S() {
     if [ $# -ne 1 ]; then
         echo "Usage: S <nom_du_favori>"
     else
-        echo "$(pwd)/$1" >> "$FAVORITES_FILE"
+        echo "$1 -> $(pwd)" >> "$FAVORITES_FILE"
         echo "Favori \"$1\" sauvegardé."
     fi
 }
@@ -23,9 +23,9 @@ C() {
         echo "Usage: C <nom_du_favori>"
     else
         local favorite_path
-        favorite_path=$(grep -F "$1" "$FAVORITES_FILE")
+        favorite_path=$(grep -F "$1 ->" "$FAVORITES_FILE" | sed 's/.* -> //')
         if [ -n "$favorite_path" ]; then
-            cd "$(echo "$favorite_path" | cut -d ' ' -f 1)"
+            cd "$favorite_path"
             echo "Vous êtes maintenant dans le répertoire favori \"$1\"."
         else
             echo "Le répertoire favori \"$1\" n'existe pas."
@@ -38,8 +38,8 @@ R() {
     if [ $# -ne 1 ]; then
         echo "Usage: R <nom_du_favori>"
     else
-        if grep -q -F "$1" "$FAVORITES_FILE"; then
-            sed -i -e "/$1/d" "$FAVORITES_FILE"
+        if grep -q -F "$1 ->" "$FAVORITES_FILE"; then
+            sed -i -e "/$1 ->/d" "$FAVORITES_FILE"
             echo "Favori \"$1\" supprimé."
         else
             echo "Le répertoire favori \"$1\" n'existe pas."
@@ -50,7 +50,7 @@ R() {
 # Fonction L (List) pour afficher la liste de tous les favoris
 L() {
     echo "Liste de favoris :"
-    cat "$FAVORITES_FILE" | awk '{print NR ". " $2}'
+    grep -F " -> " "$FAVORITES_FILE" | awk '{print NR ". " $1}'
 }
 
 # Exécution du script principal
