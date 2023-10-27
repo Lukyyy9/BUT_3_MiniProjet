@@ -51,7 +51,7 @@ Pour utiliser le script de gestion de favoris, suivez les étapes suivantes :
     \item Téléchargez le script à l'adresse suivante : \url{https://github.com/Lukyyy9/BUT_3_MiniProjet}.
     \item Placez le script dans un répertoire de votre choix.
     \item Ouvrez un terminal et déplacez-vous dans le répertoire du script.
-    \item Rendez le script exécutable en utilisant la commande \texttt{chmod +x favorites.sh}.
+    \item Rendez le script exécutable en utilisant la commande \texttt{chmod +x BUT_3_MiniProjet.sh}.
 
     \item Ajoutez le répertoire du script à votre chemin (PATH) en modifiant votre fichier de configuration de shell, par exemple \texttt{~/.bashrc}, en y ajoutant la ligne suivante :
 
@@ -73,7 +73,7 @@ La fonction S permet de sauvegarder un nouveau favori en enregistrant le répert
 
 Exemple d'utilisation :
 \begin{lstlisting}[style=mystyle]
-$ ./favorites.sh S mon_favori
+$ ./BUT_3_MiniProjet.sh S mon_favori
 Favori "mon_favori" sauvegardé.
 \end{lstlisting}
 
@@ -82,7 +82,7 @@ La fonction C permet de se déplacer dans un répertoire favori. Elle prend en a
 
 Exemple d'utilisation :
 \begin{lstlisting}[style=mystyle]
-$ ./favorites.sh C mon_favori
+$ ./BUT_3_MiniProjet.sh C mon_favori
 Vous êtes maintenant dans le répertoire favori "mon_favori".
 \end{lstlisting}
 
@@ -91,7 +91,7 @@ La fonction R permet de supprimer un favori de la liste en fournissant son nom. 
 
 Exemple d'utilisation :
 \begin{lstlisting}[style=mystyle]
-$ ./favorites.sh R mon_favori
+$ ./BUT_3_MiniProjet.sh R mon_favori
 Favori "mon_favori" supprimé.
 \end{lstlisting}
 
@@ -100,7 +100,7 @@ La fonction L affiche la liste de tous les favoris enregistrés.
 
 Exemple d'utilisation :
 \begin{lstlisting}[style=mystyle]
-$ ./favorites.sh L
+$ ./BUT_3_MiniProjet.sh L
 Liste de favoris :
 1. mon_favori
 2. autre_favori
