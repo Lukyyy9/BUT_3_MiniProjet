@@ -49,20 +49,19 @@ Pour utiliser le script de gestion de favoris, suivez les étapes suivantes :
 
 \begin{enumerate}
     \item Téléchargez le script à l'adresse suivante : \url{https://github.com/Lukyyy9/BUT_3_MiniProjet}.
-    
     \item Placez le script dans un répertoire de votre choix.
-    
     \item Ouvrez un terminal et déplacez-vous dans le répertoire du script.
+    \item Rendez le script exécutable en utilisant la commande \texttt{chmod +x BUT\_3\_MiniProjet.sh}
+
+    \item Ajoutez le répertoire du script à votre chemin (PATH) en éxécutant les commandes suivantes :
     
-    \item Rendez le script exécutable en utilisant la commande \texttt{chmod +x BUT_3_MiniProjet.sh}.
+    \begin{lstlisting}[style=mystyle]chmod +x BUT_3_MiniProjet.sh
+    mkdir -p ~/bin
+    mv BUT_3_MiniProjet.sh ~/bin/
+    export PATH="$HOME/bin:$PATH"
+    source ~/.bashrc}\end{lstlisting}
 
-    \item Ajoutez le répertoire du script à votre chemin (PATH) en modifiant votre fichier de configuration de shell, par exemple \texttt{~/.bashrc}, en y ajoutant la ligne suivante :
-
-    \begin{verbatim}
-    export PATH="$PATH:/chemin/vers/le/dossier/contenant/le/script"
-    \end{verbatim}
-
-    \item Relancez votre terminal.
+    \item Rechargez votre configuration de shell en exécutant la commande \texttt{source ~/.bashrc}.
 
     \item Vous pouvez maintenant utiliser les commandes du script pour gérer vos favoris, comme expliqué dans la documentation.
 
